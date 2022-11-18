@@ -14,8 +14,23 @@
 </div>
     <span uk-icon="icon: search" class="button search-icon-btn" id="search-submit-btn"></span>
 </div>
+{{#if providers}}
 {{#each providers as |provider|}}
 {{>provider-details provider}}
 {{/each}}
+{{else}}
+<div class="provider-container">
+    <div>
+        <div class="bio-header">
+            <h4 id="prov-username">404</h4>
+        </div>
+        <div class="bio-content">
+            <h4>No providers in this area.</h4>
+        </div>
+    </div>
+    <div class="skills-list">
+    </div>
+</div>
+{{/if}}
 
 <script src="/js/search.js"></script>
